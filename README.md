@@ -3,11 +3,12 @@ Inspired by [this video](https://www.youtube.com/watch?v=yju4zwKSriI&t=461s), sp
 
 The main idea is to use a [Trie](https://en.wikipedia.org/wiki/Trie) to store a dictionary of words 
 and then query the trie to not only search for a word but also perform some pattern matching 
-(where * means any ascii character). The trick (as highlighted in the video above)  
-is that when you push the word into the dictionary, you also push all valid pattern combinations too.
+(where * means any ascii character).  
+
+The trick (as highlighted in the video above) is that when you push the word into the dictionary, you also push all valid pattern combinations too.
 This means that the setup time would be very long (O(2^(length of string)) for each string) but the time to match a pattern in the dictionary is now O(length of string) time  
 
-For example, if "foo" and "bar" were added to the dictionary&mdash;using the `add_regex` function, of course. Then,
+For example, if "foo" and "bar" were added to the dictionary &mdash; using the `add_regex` function, of course. Then,
 ```c
 find_word("foo");
 find_word("*oo");
