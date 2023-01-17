@@ -15,7 +15,8 @@ find_word("*oo");
 find_word("***");
 find_word("ba*");
 ```
-will all return true
+will all return true.  
+**You can check out trietests for a live example of how to use the library.**
 
 PS: There are a some weird tricks used in this project. 
 This is partly because this is my first time working with tries and also because 
